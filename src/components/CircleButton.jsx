@@ -1,10 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-
+import React from "react";
 export default function CircleButton(props) {
-  const { children } = props;
+  const { children, style } = props;
   return (
-    <View style={styles.circleButton}>
+    <View style={[styles.circleButton, style]}>
       <Text style={styles.circleButtonLabel}>{children}</Text>
     </View>
   );
