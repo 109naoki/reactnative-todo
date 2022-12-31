@@ -1,48 +1,17 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import AppBar from "./src/components/AppBar";
+import CircleButton from "./src/components/CircleButton";
+import MemoList from "./src/components/MemoList";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.appbar}>
-        <View style={styles.appbarInner}>
-          <Text style={styles.appbarTitle}>Memo App</Text>
-          <Text style={styles.appbarRight}>ログアウト</Text>
-        </View>
-      </View>
+      <AppBar />
 
-      <View>
-        <View style={styles.memoListItem}>
-          <View>
-            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-            <Text style={styles.memoListItemDate}>2022年12月24日 12:00</Text>
-          </View>
-          <View>
-            <Text>x</Text>
-          </View>
-        </View>
-        <View style={styles.memoListItem}>
-          <View>
-            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-            <Text style={styles.memoListItemDate}>2022年12月24日 12:00</Text>
-          </View>
-          <View>
-            <Text>x</Text>
-          </View>
-        </View>
-        <View style={styles.memoListItem}>
-          <View>
-            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-            <Text style={styles.memoListItemDate}>2022年12月24日 12:00</Text>
-          </View>
-          <View>
-            <Text>x</Text>
-          </View>
-        </View>
-      </View>
-      <View style={styles.circleButton}>
-        <Text style={styles.circleButtonLabel}>＋</Text>
-      </View>
+      <MemoList />
+
+      <CircleButton>＋</CircleButton>
     </View>
   );
 }
