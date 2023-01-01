@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { Feather } from "@expo/vector-icons";
 export default function MemoList() {
   return (
     <View>
@@ -10,7 +11,7 @@ export default function MemoList() {
           <Text style={styles.memoListItemDate}>2022年12月24日 12:00</Text>
         </View>
         <View>
-          <Text>x</Text>
+          <Feather name="x" size={12} color="#B0B0B0" />
         </View>
       </View>
       <View style={styles.memoListItem}>
@@ -19,7 +20,7 @@ export default function MemoList() {
           <Text style={styles.memoListItemDate}>2022年12月24日 12:00</Text>
         </View>
         <View>
-          <Text>x</Text>
+          <Feather name="x" size={12} color="#B0B0B0" />
         </View>
       </View>
       <View style={styles.memoListItem}>
@@ -28,7 +29,7 @@ export default function MemoList() {
           <Text style={styles.memoListItemDate}>2022年12月24日 12:00</Text>
         </View>
         <View>
-          <Text>x</Text>
+          <Feather name="x" size={12} color="#B0B0B0" />
         </View>
       </View>
     </View>

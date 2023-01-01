@@ -1,11 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { AntDesign } from "@expo/vector-icons";
 export default function CircleButton(props) {
-  const { children, style } = props;
+  const { children, style, name } = props;
   return (
     <View style={[styles.circleButton, style]}>
-      <Text style={styles.circleButtonLabel}>{children}</Text>
+      <AntDesign name={name} size={32} color="white" />
     </View>
   );
 }
