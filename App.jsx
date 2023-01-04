@@ -14,6 +14,7 @@ import SignUpScreen from "./src/screens/SignUpScreen";
 import { LogBox } from "react-native";
 import { firebaseConfig } from "./env";
 const Stack = createStackNavigator();
+require("firebase/firestore");
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
