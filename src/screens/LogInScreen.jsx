@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AppBar from "../components/AppBar";
 import Button from "../components/Button";
 import firebase from "firebase";
@@ -31,6 +31,18 @@ export default function LogInScreen(props) {
         Alert.alert(error.code);
       });
   }
+
+  useEffect(() => {
+    const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        navigation.reset({
+          index: 0,
+          routes: [{ name: "MemoList" }],
+        });
+      }
+    });
+    return unsubscribe;
+  }, []);
   return (
     <View style={styles.container}>
       <View style={styles.inner}>
